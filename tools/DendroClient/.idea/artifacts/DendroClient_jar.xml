@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="DendroClient:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DendroClient_jar</output-path>
+    <root id="archive" name="DendroClient.jar">
+      <element id="module-output" name="DendroClient" />
+    </root>
+  </artifact>
+</component>

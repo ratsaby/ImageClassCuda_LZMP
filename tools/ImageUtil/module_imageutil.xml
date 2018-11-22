@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_imageutil" default="compile.module.imageutil">
+  <dirname property="module.imageutil.basedir" file="${ant.file.module_imageutil}"/>
+  
+  <property name="module.jdk.home.imageutil" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.imageutil" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.imageutil" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.imageutil" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="imageutil.output.dir" value="${module.imageutil.basedir}/out/production/ImageUtil"/>
+  <property name="imageutil.testoutput.dir" value="${module.imageutil.basedir}/out/test/ImageUtil"/>
+  
+  <path id="imageutil.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="imageutil.module.production.classpath">
+    <path refid="${module.jdk.classpath.imageutil}"/>
+  </path>
+  
+  <path id="imageutil.runtime.production.module.classpath">
+    <pathelement location="${imageutil.output.dir}"/>
+  </path>
+  
+  <path id="imageutil.module.classpath">
+    <path refid="${module.jdk.classpath.imageutil}"/>
+    <pathelement location="${imageutil.output.dir}"/>
+  </path>
+  
+  <path id="imageutil.runtime.module.classpath">
+    <pathelement location="${imageutil.testoutput.dir}"/>
+    <pathelement location="${imageutil.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.imageutil">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.imageutil">
+    <patternset refid="excluded.from.module.imageutil"/>
+  </patternset>
+  
+  <path id="imageutil.module.sourcepath">
+    <dirset dir="${module.imageutil.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.imageutil" depends="compile.module.imageutil.production,compile.module.imageutil.tests" description="Compile module ImageUtil"/>
+  
+  <target name="compile.module.imageutil.production" depends="register.custom.compilers" description="Compile module ImageUtil; production classes">
+    <mkdir dir="${imageutil.output.dir}"/>
+    <javac2 destdir="${imageutil.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.imageutil}/javac">
+      <compilerarg line="${compiler.args.imageutil}"/>
+      <bootclasspath refid="imageutil.module.bootclasspath"/>
+      <classpath refid="imageutil.module.production.classpath"/>
+      <src refid="imageutil.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.imageutil"/>
+    </javac2>
+    
+    <copy todir="${imageutil.output.dir}">
+      <fileset dir="${module.imageutil.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.imageutil.tests" depends="register.custom.compilers,compile.module.imageutil.production" description="compile module ImageUtil; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.imageutil" description="cleanup module">
+    <delete dir="${imageutil.output.dir}"/>
+    <delete dir="${imageutil.testoutput.dir}"/>
+  </target>
+</project>
