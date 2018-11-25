@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ImageClassCuda_LZMP"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ImageClassCuda_LZMP">
+				<Option output="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/ImageClassCuda_LZMP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageClassCuda_LZMP"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ImageClassCuda_LZMP/fast">
+				<Option output="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/ImageClassCuda_LZMP.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageClassCuda_LZMP/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/cat_list.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/command_line.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/definitions.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/dist.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/entropy.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/ffiles.hpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/gpu_dict.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/img_types.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/main.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/make_path.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/my_timer.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/ocv_functions.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/write_cases_to_file.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/inc/write_distance_mat_to_file.h">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/cat_list.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/command_line.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/entropy.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/ffiles.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/main.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/make_path.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/ocv_functions.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/write_cases_to_file.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/cuda/alg_cuda/scr/write_distance_mat_to_file.cpp">
+			<Option target="ImageClassCuda_LZMP"/>
+		</Unit>
+		<Unit filename="/cygdrive/h/programms/ariel/ImageClassCuda_LZMP/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
