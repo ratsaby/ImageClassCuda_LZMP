@@ -10,6 +10,10 @@ RM := rm -rf
 -include sources.mk
 -include subdir.mk
 -include scr/subdir.mk
+-include .metadata/.plugins/org.eclipse.cdt.make.core/subdir.mk
+
+OS_SUFFIX := $(subst Linux,linux,$(subst Darwin/x86_64,darwin,$(shell uname -s)/$(shell uname -m)))
+
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -38,22 +42,30 @@ endif
 
 -include ../makefile.defs
 
+# OpenGL+GLUT OS-specific define
+ifeq ($(shell uname -s),Darwin)
+GLUT_LIBS := -Xlinker -framework -Xlinker GLUT -Xlinker -framework -Xlinker OpenGL
+else
+GLUT_LIBS := -lGL -lGLU -lglut 
+endif
+
+
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: ImageClasAlgorithmMultiDict
+all: alg_cuda
 
 # Tool invocations
-ImageClasAlgorithmMultiDict: $(OBJS) $(USER_OBJS)
+alg_cuda: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: NVCC Linker'
-	/usr/local/cuda-6.0/bin/nvcc --cudart static -L/usr/lib --relocatable-device-code=true -gencode arch=compute_35,code=compute_35 -gencode arch=compute_35,code=sm_35 -link -o  "ImageClasAlgorithmMultiDict" $(OBJS) $(USER_OBJS) $(LIBS)
+	/usr/local/cuda-8.0/bin/nvcc --cudart static -L/usr/lib --relocatable-device-code=true -gencode arch=compute_20,code=compute_20 -gencode arch=compute_35,code=compute_35 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35 -link -o  "alg_cuda" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CU_DEPS)$(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) ImageClasAlgorithmMultiDict
+	-$(RM) $(CU_DEPS)$(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) alg_cuda
 	-@echo ' '
 
 .PHONY: all clean dependents

@@ -54,16 +54,16 @@ CPP_DEPS += \
 scr/%.o: ../scr/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: NVCC Compiler'
-	/usr/local/cuda-6.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I/usr/local/cuda-6.5/samples/6_Advanced -I/home/alex/cuda-workspace/ImageClasAlgorithmMultiDict/inc -G -g -O0 -v -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "$(@:%.o=%.d)" "$<"
-	/usr/local/cuda-6.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I/usr/local/cuda-6.5/samples/6_Advanced -I/home/alex/cuda-workspace/ImageClasAlgorithmMultiDict/inc -G -g -O0 -v --compile  -x c++ -o  "$@" "$<"
+	/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "$(@:%.o=%.d)" "$<"
+	/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 scr/%.o: ../scr/%.cu
 	@echo 'Building file: $<'
 	@echo 'Invoking: NVCC Compiler'
-	/usr/local/cuda-6.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I/usr/local/cuda-6.5/samples/6_Advanced -I/home/alex/cuda-workspace/ImageClasAlgorithmMultiDict/inc -G -g -O0 -v -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "$(@:%.o=%.d)" "$<"
-	/usr/local/cuda-6.0/bin/nvcc --device-c -G -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I/usr/local/cuda-6.5/samples/6_Advanced -I/home/alex/cuda-workspace/ImageClasAlgorithmMultiDict/inc -O0 -g -gencode arch=compute_35,code=compute_35 -gencode arch=compute_35,code=sm_35 -v  -x cu -o  "$@" "$<"
+	/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "$(@:%.o=%.d)" "$<"
+	/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_20,code=compute_20 -gencode arch=compute_35,code=compute_35 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -x cu -o  "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

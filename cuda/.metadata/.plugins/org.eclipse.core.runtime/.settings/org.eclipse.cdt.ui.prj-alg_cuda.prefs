@@ -1,0 +1,3 @@
+buildConsole/keepLog=true
+buildConsole/logLocation=/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/.metadata/.plugins/org.eclipse.cdt.ui/alg_cuda.build.log
+eclipse.preferences.version=1

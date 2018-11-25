@@ -1,0 +1,216 @@
+00:30:29 **** Clean-only build of configuration Debug for project alg_cuda ****
+make clean 
+rm -rf  ./scr/dist.d ./scr/gpu_dict.d ./scr/my_timer.d  ./scr/cat_list.o ./scr/command_line.o ./scr/dist.o ./scr/entropy.o ./scr/ffiles.o ./scr/gpu_dict.o ./scr/main.o ./scr/make_path.o ./scr/my_timer.o ./scr/ocv_functions.o ./scr/write_cases_to_file.o ./scr/write_distance_mat_to_file.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  ./scr/cat_list.d ./scr/command_line.d ./scr/entropy.d ./scr/ffiles.d ./scr/main.d ./scr/make_path.d ./scr/ocv_functions.d ./scr/write_cases_to_file.d ./scr/write_distance_mat_to_file.d  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.d  alg_cuda
+ 
+00:30:29 **** Incremental Build of configuration Debug for project alg_cuda ****
+make all 
+Building file: ../scr/cat_list.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/cat_list.d" "../scr/cat_list.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/cat_list.o" "../scr/cat_list.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+../scr/cat_list.cpp: In function ‘void cat_list_euclidean_dist_to_cat(float*, int, int)’:
+../scr/cat_list.cpp:345:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     write_cases_to_f(category, images, row_cat, col_img, count_normal1D, DIST1);
+                                                                               ^
+../scr/cat_list.cpp: In function ‘void cat_list_ExplicitProtoDistInCase(float*, int, int)’:
+../scr/cat_list.cpp:453:72: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     write_cases_to_f(proto, images, row, col_img, count_normal1D, DIST2);
+                                                                        ^
+../scr/cat_list.cpp: In function ‘void cat_list_test()’:
+../scr/cat_list.cpp:485:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     cat_list_push_to_list(CAT_FOREST_NAME, CAT_FOREST_num_of_img);
+                                                                 ^
+../scr/cat_list.cpp:486:59: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     cat_list_push_to_list(CAT_SEA_NAME, CAT_SEA_num_of_img);
+                                                           ^
+../scr/cat_list.cpp:487:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     cat_list_push_to_list(CAT_DESERT_NAME, CAT_DESERT_num_of_img);
+                                                                 ^
+../scr/cat_list.cpp:488:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     cat_list_push_to_list(CAT_CITY_NAME, CAT_CITY_num_of_img);
+                                                             ^
+Finished building: ../scr/cat_list.cpp
+ 
+Building file: ../scr/command_line.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/command_line.d" "../scr/command_line.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/command_line.o" "../scr/command_line.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/command_line.cpp
+ 
+Building file: ../scr/dist.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/dist.d" "../scr/dist.cu"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_20,code=compute_20 -gencode arch=compute_35,code=compute_35 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -x cu -o  "scr/dist.o" "../scr/dist.cu"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/dist.cu
+ 
+Building file: ../scr/entropy.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/entropy.d" "../scr/entropy.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/entropy.o" "../scr/entropy.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/entropy.cpp
+ 
+Building file: ../scr/ffiles.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/ffiles.d" "../scr/ffiles.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/ffiles.o" "../scr/ffiles.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/ffiles.cpp
+ 
+Building file: ../scr/gpu_dict.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/gpu_dict.d" "../scr/gpu_dict.cu"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_20,code=compute_20 -gencode arch=compute_35,code=compute_35 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -x cu -o  "scr/gpu_dict.o" "../scr/gpu_dict.cu"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/gpu_dict.cu
+ 
+Building file: ../scr/main.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/main.d" "../scr/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/main.o" "../scr/main.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+../scr/main.cpp: In function ‘int main(int, char**)’:
+../scr/main.cpp:241:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         comm_line_set_user_name(DEFAULT_NAME);
+                                             ^
+../scr/main.cpp:242:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         comm_line_set_distance_type(DEFAULT_DISTANCE_TYPE);
+                                                          ^
+../scr/main.cpp:243:60: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         comm_line_set_algorithm_type(DEFAULT_ALGORITHM_TYPE);
+                                                            ^
+../scr/main.cpp:250:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         comm_line_set_distance_type(DEFAULT_DISTANCE_TYPE);
+                                                          ^
+../scr/main.cpp:251:60: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         comm_line_set_algorithm_type(DEFAULT_ALGORITHM_TYPE);
+                                                            ^
+../scr/main.cpp:259:59: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+          comm_line_set_distance_type(DEFAULT_DISTANCE_TYPE);
+                                                           ^
+../scr/main.cpp:261:60: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         comm_line_set_algorithm_type(DEFAULT_ALGORITHM_TYPE);
+                                                            ^
+../scr/main.cpp:268:59: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+          comm_line_set_distance_type(DEFAULT_DISTANCE_TYPE);
+                                                           ^
+../scr/main.cpp:274:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             comm_line_set_algorithm_type(DEFAULT_ALGORITHM_TYPE);
+                                                                ^
+../scr/main.cpp:281:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    comm_line_set_distance_type(DEFAULT_DISTANCE_TYPE);
+                                                     ^
+../scr/main.cpp:287:55: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    comm_line_set_algorithm_type(DEFAULT_ALGORITHM_TYPE);
+                                                       ^
+Finished building: ../scr/main.cpp
+ 
+Building file: ../scr/make_path.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/make_path.d" "../scr/make_path.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/make_path.o" "../scr/make_path.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+../scr/make_path.cpp: In function ‘void make_path_all_system_path(char*)’:
+../scr/make_path.cpp:206:93: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(search_unlab_prot_path, HOME_PATH, user_name, SEARCH_PATH_FOLDER);
+                                                                                             ^
+../scr/make_path.cpp:206:93: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../scr/make_path.cpp:207:101: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(save_unlab_prot_gray_path, HOME_PATH, user_name, GRAY_IMAGE_PATH_TO_SAVE);
+                                                                                                     ^
+../scr/make_path.cpp:207:101: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../scr/make_path.cpp:208:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(sorted_prot_path, HOME_PATH, user_name, IMAGE_PATH_SORTED_PROT);
+                                                                                           ^
+../scr/make_path.cpp:208:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../scr/make_path.cpp:209:90: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(input_image_read_path, HOME_PATH, user_name, INPUT_IMAGE_PATH);
+                                                                                          ^
+../scr/make_path.cpp:209:90: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../scr/make_path.cpp:210:108: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(input_image_save_gray_path, HOME_PATH, user_name, GRAY_INPUT_IMAGE_PATH_TO_SAVE);
+                                                                                                            ^
+../scr/make_path.cpp:210:108: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../scr/make_path.cpp:211:96: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(sub_image_save_gray_path, HOME_PATH, user_name, SAVE_SUB_IMAGE_PATH);
+                                                                                                ^
+../scr/make_path.cpp:211:96: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../scr/make_path.cpp:212:97: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(distance_mat_save_path, HOME_PATH, user_name, SAVE_DISTANCE_MAT_PATH);
+                                                                                                 ^
+../scr/make_path.cpp:212:97: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../scr/make_path.cpp:213:78: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_3_strings(cases_save_path, HOME_PATH, user_name, CASES_PATH);
+                                                                              ^
+../scr/make_path.cpp:213:78: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+Finished building: ../scr/make_path.cpp
+ 
+Building file: ../scr/my_timer.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/my_timer.d" "../scr/my_timer.cu"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile --relocatable-device-code=true -gencode arch=compute_20,code=compute_20 -gencode arch=compute_35,code=compute_35 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -x cu -o  "scr/my_timer.o" "../scr/my_timer.cu"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/my_timer.cu
+ 
+Building file: ../scr/ocv_functions.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/ocv_functions.d" "../scr/ocv_functions.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/ocv_functions.o" "../scr/ocv_functions.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+../scr/ocv_functions.cpp: In function ‘int ocv_push_img_to_list(char*, char*)’:
+../scr/ocv_functions.cpp:150:78: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     make_path_add_postfix_to_image(newFileName, POSTFIX_TO_FILE_TO_SAVE, name);
+                                                                              ^
+../scr/ocv_functions.cpp: In function ‘int ocv_split_image_dim_save_to_list(IplImage*, CvSize, char*)’:
+../scr/ocv_functions.cpp:205:112: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             make_path_add_postfix_to_image(postfix_save_file_path, POSTFIX_TO_SUB_IMAGE_TO_SAVE, save_file_path);
+                                                                                                                ^
+../scr/ocv_functions.cpp: In function ‘void ocv_split_image_dim(IplImage*, CvSize, char*)’:
+../scr/ocv_functions.cpp:254:112: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             make_path_add_postfix_to_image(postfix_save_file_path, POSTFIX_TO_SUB_IMAGE_TO_SAVE, save_file_path);
+                                                                                                                ^
+Finished building: ../scr/ocv_functions.cpp
+ 
+Building file: ../scr/write_cases_to_file.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/write_cases_to_file.d" "../scr/write_cases_to_file.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/write_cases_to_file.o" "../scr/write_cases_to_file.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/write_cases_to_file.cpp
+ 
+Building file: ../scr/write_distance_mat_to_file.cpp
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir "scr" -M -o "scr/write_distance_mat_to_file.d" "../scr/write_distance_mat_to_file.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c++ -o  "scr/write_distance_mat_to_file.o" "../scr/write_distance_mat_to_file.cpp"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../scr/write_distance_mat_to_file.cpp
+ 
+Building file: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+Invoking: NVCC Compiler
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35  -odir ".metadata/.plugins/org.eclipse.cdt.make.core" -M -o ".metadata/.plugins/org.eclipse.cdt.make.core/specs.d" "../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/usr/local/cuda-8.0/bin/nvcc -I/usr/include/opencv -I/usr/local/cuda/samples/common/inc -I"/home/alex/cuda-workspace/ImageClassCuda_LZMP/cuda/alg_cuda/inc" -G -g -O0 --compile  -x c -o  ".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" "../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c"
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+ 
+Building target: alg_cuda
+Invoking: NVCC Linker
+/usr/local/cuda-8.0/bin/nvcc --cudart static -L/usr/lib --relocatable-device-code=true -gencode arch=compute_20,code=compute_20 -gencode arch=compute_35,code=compute_35 -gencode arch=compute_20,code=sm_20 -gencode arch=compute_35,code=sm_35 -link -o  "alg_cuda"  ./scr/cat_list.o ./scr/command_line.o ./scr/dist.o ./scr/entropy.o ./scr/ffiles.o ./scr/gpu_dict.o ./scr/main.o ./scr/make_path.o ./scr/my_timer.o ./scr/ocv_functions.o ./scr/write_cases_to_file.o ./scr/write_distance_mat_to_file.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o   -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_flann
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Finished building target: alg_cuda
+ 
