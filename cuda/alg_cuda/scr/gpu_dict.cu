@@ -57,6 +57,10 @@
  *@param  lzmp_value: device pointer where kernel will copy after calculation  
  *        LZ-complexity of each member in array 
  *@retval None
+ *
+ *
+ * JOEL: This function is what Alex calls gpu_LZMP function in his Thesis book
+ *
  */
 __device__ void gpu_calc_single_LZMP(char *data, int size, int *lz_val) {
     // initialize Thread index within a block
@@ -136,6 +140,8 @@ __device__ void gpu_calc_single_LZMP(char *data, int size, int *lz_val) {
  *@param  lzmp_value: device pointer where kernel will copy after calculation  
  *        LZ-complexity of each member in array 
  *@retval None
+ *
+ *JOEL: this function is what Alex calls gpu_VLZMP in his thesis book
  */
 __global__ void gpu_lzmp_single(img_data_t *ptr, int *lzmp_value) {
     // initialize Thread index within a block
@@ -549,3 +555,4 @@ bool gpu_dist_mat_from_two_img_list(img_struct_t *img_row, img_struct_t *img_col
     printf("Calculation distance matrix from image list - Complete\n");
     return true;
 }
+
